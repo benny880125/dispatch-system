@@ -5,11 +5,15 @@ from enum import Enum
 class DriverStatus(Enum):
     IDLE = "idle"
     BUSY = "busy"
+    def __str__(self):
+        return self.value
 
 class OrderStatus(Enum):
     PENDING = "pending"
     ASSIGNED = "assigned"
     COMPLETED = "completed"
+    def __str__(self):
+        return self.value
 
 @dataclass
 class Location:
